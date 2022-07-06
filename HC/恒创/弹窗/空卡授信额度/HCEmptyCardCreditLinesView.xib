@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCEmptyCardCreditLinesView">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="175"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HC_EmptyCard_TCBG" translatesAutoresizingMaskIntoConstraints="NO" id="4mj-CI-RQ8">
+                    <rect key="frame" x="0.0" y="0.0" width="284" height="175"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请授信额度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-u8-ckB">
+                    <rect key="frame" x="30" y="22" width="224" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QE4-4R-P0a">
+                    <rect key="frame" x="23" y="62" width="238" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsT-Mt-aP1">
+                    <rect key="frame" x="159" y="121" width="86" height="31"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.83921568627450982" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="86" id="GM0-33-TmD"/>
+                        <constraint firstAttribute="height" constant="31" id="h9d-qB-Xf9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Deu-7T-mcV">
+                    <rect key="frame" x="39" y="121" width="86" height="31"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="IgN-LE-fs2"/>
+                        <constraint firstAttribute="width" constant="86" id="U88-Jw-C4S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4mj-CI-RQ8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6LE-ft-LAs"/>
+                <constraint firstItem="Deu-7T-mcV" firstAttribute="top" secondItem="QE4-4R-P0a" secondAttribute="bottom" constant="25" id="8tZ-at-Dfa"/>
+                <constraint firstAttribute="trailing" secondItem="CMs-u8-ckB" secondAttribute="trailing" constant="30" id="DCs-Mj-lTZ"/>
+                <constraint firstItem="4mj-CI-RQ8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="GwD-uN-diN"/>
+                <constraint firstItem="Deu-7T-mcV" firstAttribute="top" secondItem="QE4-4R-P0a" secondAttribute="bottom" constant="25" id="HVD-YU-pym"/>
+                <constraint firstItem="QE4-4R-P0a" firstAttribute="top" secondItem="CMs-u8-ckB" secondAttribute="bottom" constant="22" id="KJh-YO-pWR"/>
+                <constraint firstItem="4mj-CI-RQ8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OTh-Q5-BhY"/>
+                <constraint firstItem="jsT-Mt-aP1" firstAttribute="top" secondItem="QE4-4R-P0a" secondAttribute="bottom" constant="25" id="ZgN-TB-CzP"/>
+                <constraint firstItem="QE4-4R-P0a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="dfS-TV-dQ1"/>
+                <constraint firstItem="Deu-7T-mcV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="eII-nf-jN1"/>
+                <constraint firstItem="CMs-u8-ckB" firstAttribute="top" secondItem="4mj-CI-RQ8" secondAttribute="top" constant="22" id="glZ-E0-RXD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jsT-Mt-aP1" secondAttribute="trailing" constant="39" id="ikY-sX-u3B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QE4-4R-P0a" secondAttribute="trailing" constant="23" id="kNb-e3-ppl"/>
+                <constraint firstItem="Deu-7T-mcV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="ktC-rb-IOm"/>
+                <constraint firstItem="4mj-CI-RQ8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oWh-C0-AN3"/>
+                <constraint firstItem="CMs-u8-ckB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="wcB-p9-blM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clean_btn" destination="Deu-7T-mcV" id="TUk-Vg-8bG"/>
+                <outlet property="determine" destination="jsT-Mt-aP1" id="3xJ-QJ-1vK"/>
+                <outlet property="textfield" destination="QE4-4R-P0a" id="PCu-MT-KUI"/>
+            </connections>
+            <point key="canvasLocation" x="-141" y="67"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="HC_EmptyCard_TCBG" width="284" height="175"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

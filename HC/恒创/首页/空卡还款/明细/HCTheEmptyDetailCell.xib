@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="HCTheEmptyDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KK押金退还" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-Aj-rfq">
+                        <rect key="frame" x="10" y="12" width="81.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-08-26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-io-GkB">
+                        <rect key="frame" x="10" y="36" width="71" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-ez-e9s">
+                        <rect key="frame" x="10" y="62.5" width="300" height="0.5"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="hvW-6T-opz"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+500.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pV-g5-xe4">
+                        <rect key="frame" x="190" y="22.5" width="120" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="Qzv-52-smV"/>
+                            <constraint firstAttribute="height" constant="18" id="kFc-6B-zcr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.99607843137254903" green="0.67450980392156867" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qDo-io-GkB" firstAttribute="top" secondItem="nzd-Aj-rfq" secondAttribute="bottom" constant="6" id="6yL-tr-IOo"/>
+                    <constraint firstItem="qDo-io-GkB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="9VG-BK-E2C"/>
+                    <constraint firstItem="nzd-Aj-rfq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="DLm-5W-oEu"/>
+                    <constraint firstAttribute="trailing" secondItem="5pV-g5-xe4" secondAttribute="trailing" constant="10" id="Nk2-Uj-GDZ"/>
+                    <constraint firstItem="D0D-ez-e9s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Xai-Bt-K49"/>
+                    <constraint firstItem="nzd-Aj-rfq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aLc-zf-JJx"/>
+                    <constraint firstAttribute="trailing" secondItem="D0D-ez-e9s" secondAttribute="trailing" constant="10" id="icY-oK-tLn"/>
+                    <constraint firstAttribute="bottom" secondItem="D0D-ez-e9s" secondAttribute="bottom" id="r0Y-9l-OBs"/>
+                    <constraint firstItem="5pV-g5-xe4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tng-Xi-ro7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="amount" destination="5pV-g5-xe4" id="fw7-GE-5hy"/>
+                <outlet property="name" destination="nzd-Aj-rfq" id="bOa-mi-udk"/>
+                <outlet property="time" destination="qDo-io-GkB" id="gt3-4I-xYW"/>
+            </connections>
+            <point key="canvasLocation" x="-297.10144927536237" y="112.83482142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

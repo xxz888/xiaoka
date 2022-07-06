@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HCAddCustomerController">
+            <connections>
+                <outlet property="phone_textfield" destination="UlD-y2-yVP" id="eku-c6-AZ9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-m6-dTg">
+                    <rect key="frame" x="20" y="74" width="77" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="NPZ-eB-WqJ"/>
+                        <constraint firstAttribute="width" constant="77" id="P9Q-VG-K22"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-y2-yVP">
+                    <rect key="frame" x="122" y="74" width="272" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="tLe-HL-AQe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="820-6P-aUS">
+                    <rect key="frame" x="20" y="114" width="374" height="0.5"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="mxa-zD-Vj0"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注：添加的中介客户可以正常登录和使用恒创app，该手机号为客户注册手机号，可以与其银行卡预留手机号不一致" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-nu-Wxd">
+                    <rect key="frame" x="20" y="129.5" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EBu-tk-ABf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                    <color key="textColor" red="1" green="0.58039215686274503" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qO-0P-7C6">
+                    <rect key="frame" x="20" y="217.5" width="374" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="lDg-Nk-Lux"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="下一步" backgroundImage="KD_BindCardBtn">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="下一步:" destination="-1" eventType="touchUpInside" id="ZgM-oP-Vt1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6qO-0P-7C6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="3g8-Hu-H1j"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6qO-0P-7C6" secondAttribute="trailing" constant="20" id="Cv1-gN-LGM"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="UlD-y2-yVP" secondAttribute="trailing" constant="20" id="IWb-YU-N0M"/>
+                <constraint firstItem="820-6P-aUS" firstAttribute="top" secondItem="PFg-m6-dTg" secondAttribute="bottom" constant="20" id="IwJ-NV-qX8"/>
+                <constraint firstItem="UlD-y2-yVP" firstAttribute="centerY" secondItem="PFg-m6-dTg" secondAttribute="centerY" id="JiS-bq-xPQ"/>
+                <constraint firstItem="dQA-nu-Wxd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="OEs-35-Cgn"/>
+                <constraint firstItem="6qO-0P-7C6" firstAttribute="top" secondItem="dQA-nu-Wxd" secondAttribute="bottom" constant="48" id="a2a-Vh-893"/>
+                <constraint firstItem="dQA-nu-Wxd" firstAttribute="top" secondItem="820-6P-aUS" secondAttribute="bottom" constant="15" id="aah-jh-JXS"/>
+                <constraint firstItem="PFg-m6-dTg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="bJp-EP-Kfd"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dQA-nu-Wxd" secondAttribute="trailing" constant="20" id="eCC-S5-mgs"/>
+                <constraint firstItem="820-6P-aUS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="f9C-Nd-Qsn"/>
+                <constraint firstItem="PFg-m6-dTg" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="ja0-HY-NPO"/>
+                <constraint firstItem="UlD-y2-yVP" firstAttribute="leading" secondItem="PFg-m6-dTg" secondAttribute="trailing" constant="25" id="lH3-6u-Tth"/>
+                <constraint firstAttribute="trailing" secondItem="820-6P-aUS" secondAttribute="trailing" constant="20" id="tfQ-g7-769"/>
+            </constraints>
+            <point key="canvasLocation" x="-39" y="61"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KD_BindCardBtn" width="323.5" height="45.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,264 @@
+//
+//  PrefixHeader.pch
+//  TextDemo
+//
+//  Created by 郭龙波 on 2019/6/12.
+//  Copyright © 2019 李豪. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+/**
+ *  设备的高
+ */
+#define DEVICE_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+/**
+ *  设备的寛
+ */
+#define DEVICE_WIDTH ([UIScreen mainScreen].bounds.size.width)
+///状态高度
+#define kStatusBarHeight [UIDevice statusBarHeight]
+///导航高度
+#define kNavBarHeight 44.0
+///TabBar高度
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+///状态+导航高度
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+///底部安全距离
+#define KBottomHeight [UIDevice bottomSafeHeight]
+/** 弱引用 */
+#ifndef weakify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+        #endif
+    #endif
+#endif
+
+#ifndef strongify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+        #endif
+    #endif
+#endif
+
+#define Ratio(w) ([UIScreen mainScreen].bounds.size.width/375)*w
+#define RatioH(h) ([UIScreen mainScreen].bounds.size.height/667)*h
+
+#define getBankLogo(string) [NSString stringWithFormat:@"BANK_%@",string]
+
+#define getAfterFour(string) [string substringFromIndex:string.length-4]
+
+#define isCardName(string) string.length > 4 ? [string stringByReplacingOccurrencesOfString:@"中国" withString:@""] : string
+
+#define AppendString(string,printStr) [string stringByAppendingFormat:@"%@",printStr];
+
+#define isBlankString(String) [NSString isBlankString:[NSString stringWithFormat:@"%@",String]] ? @"-" : [NSString stringWithFormat:@"%@",String]
+
+
+/*
+    项目接口地址
+    商城测试 @"http://shopcs.cqhl006.cn"
+    测试 @"http://192.168.31.165:8080"
+    正式 @"http://api.zhifu168.com"
+*/
+
+#define ApiUrl @"http://api.zhifu168.com"
+
+//#define ApiUrl @"http://192.168.31.165:8080"
+
+//品牌ID 控制整个APP的品牌
+#define brandId @"1"
+
+///高德的key
+#define AMaPAppKey   @"8a4899fcace49e5d367fd671ff965c8e"
+
+///字体主题色
+#define FontThemeColor [UIColor colorWithHexString:@"#F7CF9E"]
+
+#import "HCTabberController.h"
+
+//框架
+#import "UIViewController+HUD.h"
+#import "BlocksKit+UIKit.h"
+#import "Masonry.h"
+#import "EDNetworking.h"
+#import "MJRefresh.h"
+
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "LSTPopView.h"
+#import <Photos/Photos.h>
+#import "IQKeyboardManager.h"
+///当列表为空时，显示的默认图片
+#import "UIScrollView+EmptyDataSet.h"
+
+//支付宝
+#import <AlipaySDK/AlipaySDK.h>
+#import <YYKit/YYKit.h>
+//高德地图
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
+// 引入 JPush 功能所需头文件
+#import "JPUSHService.h"
+#import <UserNotifications/UserNotifications.h>
+
+
+#import "RPTaggedNavView.h"
+
+//扩展类
+#import "UIColor+Hex.h"
+#import "UIImage+Category.h"
+#import "NSString+Category.h"
+#import "UIDevice+YL.h"
+#import "UILabel+Category.h"
+#import "UIFont+Category.h"
+#import "UIImageView+Category.h"
+#import "UIView+Category.h"
+#import "NSArray+Category.h"
+#import "UIButton+Category.h"
+#import "NSDate+hfx.h"
+#import "NSDate+Extend.h"
+#import "UIButton+EnlargeTouchArea.h"
+#import "WLCardNoFormatter.h"
+#import "UISegmentedControl+Style.h"
+#import "UIViewController+HideNavBackTitle.h"
+
+
+#import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+//导航栏拦截
+#import "UIViewController+BackButtonHandler.h"
+//日期选择
+#import "LDCalendarView.h"
+//导航栏
+#import "XPRootNavigationController.h"
+//提示
+#import "XHToast.h"
+//时间选择
+#import "WSDatePickerView.h"
+//自定义地址选择
+#import "KisZDYPickerView.h"
+//
+#import "UIViewController+ImagePicker.h"
+
+//父类
+#import "BaseViewController.h"
+//首页
+#import "HCHomeViewController.h"
+//版本更新
+#import "HCVersionUpdateView.h"
+//卡包
+#import "HCCardPackageController.h"
+//收益
+#import "HCEarningsController.h"
+//我的
+#import "HCMyViewController.h"
+//登陆
+#import "HCLoginViewController.h"
+//协议
+#import "MCProtocolViewController.h"
+//注册
+#import "HCRegisterViewController.h"
+//人脸识别
+#import "MCAccreditation1ViewController.h"
+#import "MCAccreditation2ViewController.h"
+#import "MCAccreditation3ViewController.h"
+//结算卡绑定
+#import "MCAccreditation4ViewController.h"
+//查看权益，收益规则
+#import "HCTheRulesController.h"
+#pragma 在线收款
+#import "HCOnlinePaymentViewController.h"
+//交易状态
+#import "HCTradingTypeView.h"
+//刷卡通道详情
+#import "HCGroundPointsController.h"
+//选择刷卡通道
+#import "HCChannelController.h"
+//支付确认
+#import "HCConfirmPayController.h"
+
+#pragma 余额还款
+#import "HCBalancePaymentsController.h"
+//制定计划
+#import "HCMakePlanController.h"
+//计划详情
+#import "HCPlanDetailsController.h"
+//历史记录
+#import "HCTheHistoricalRecordController.h"
+//修改信息
+#import "HCModifyTheInformationController.h"
+#import "HCConfirmPayModel.h"
+#pragma 会员中心
+#import "HCTheMemberController.h"
+
+#pragma 使用帮助
+#import "HCHelpController.h"
+#pragma 消息中心
+#import "HCMessageController.h"
+#import "HCMessageDetialController.h"
+#pragma 卡包
+//添加信用卡
+#import "HCAddCreditCardController.h"
+//修改储蓄卡信息
+#import "HCModifySavingsCardController.h"
+
+#import "HCSavingsListController.h"
+
+#import "HCCreditListController.h"
+//提现
+#import "HCReflectController.h"
+#pragma 我的
+//设置
+#import "HCSetUpTheController.h"
+//邀请好友
+#import "HCInviteFriendsController.h"
+//客服中心
+#import "HCCustomerServiceController.h"
+//直推间推 团队
+#import "HCBetweenStraightController.h"
+//素材管理
+#import "HCTheQueryMaterrialController.h"
+
+#pragma 助力还款
+#import "HCHelpHKViewController.h"
+#import "HCCustomerCardController.h"
+
+
+
+
+
+#pragma 商城
+
+#import "HCMallHomeController.h"
+#import "HCMallNineController.h"
+#import "HCMallOrderController.h"
+#import "HCMallMyController.h"
+#import "HCMallGoodsCell.h"
+#import "HCGoodsDetailController.h"
+#import "HCShoppingCartController.h"
+#import "HCMallShippingAddressController.h"
+
+
+#endif /* PrefixHeader_pch */
